@@ -1,3 +1,6 @@
+function myFunction() {
+  alert("This page contains flashing colours and movement.");
+}
 var song;
 var amp;
 var button;
@@ -7,12 +10,12 @@ var colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
 
 
   function preload() {
-    song = loadSound('song4.mp3');
+    song = loadSound('song5.mp3');
   }
   
   function setup() {
     createCanvas(windowWidth, windowHeight);
-    button = createButton('toggle');
+    button = createButton('Pause');
     button.mousePressed(toggleSong);
     song.play();
     fft = new p5.FFT();
@@ -69,13 +72,14 @@ var colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
      
         push();
         stroke(colorPalette[3]);
-        scale(scaleTreble);
+        scale(scaleTreble * 0.5);
         line(mapTreble, radius / 2, radius, radius);
         pop();
 
         push();
         stroke(colorPalette[4]);
         scale(scalemid);
+        rotate(frameCount * 0.8);
         line(mapmid, -radius * 2, radius, radius);
         pop();
 

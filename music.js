@@ -1,11 +1,10 @@
 function myFunction() {
   alert("This page contains flashing colours and movement.");
 }
-var song;
-var amp;
-var button;
-var fft = new p5.FFT();
-var colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
+let song;
+let button;
+let fft = new p5.FFT();
+let colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
 
 
 
@@ -19,8 +18,8 @@ var colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
     button.mousePressed(toggleSong);
     song.play();
     fft = new p5.FFT();
-    pieces = 6;
-    radius = windowHeight / 2;
+    pieces = 8;
+    radius = windowHeight / 4;
     
   }
 
@@ -31,18 +30,18 @@ var colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
     background(colorPalette[0]);
 
     fft.analyze();
-    var bass = fft.getEnergy(10,250);
-    var treble = fft.getEnergy(100, 150);
-    var mid = fft.getEnergy(60, 250);
+    let bass = fft.getEnergy(10,250);
+    let treble = fft.getEnergy(100, 150);
+    let mid = fft.getEnergy(60, 250);
 
-    var mapbass = map(bass, 0, 255, -100, 800);
-    var scalebass = map(bass, 0, 255, 0.5, 1.2);
+    let mapbass = map(bass, 0, 255, -100, 800);
+    let scalebass = map(bass, 0, 255, 0.5, 1.2);
 
-    var mapTreble = map(treble, 0, 255, -radius / 2, radius * 2);
-    var scaleTreble = map(treble, 0, 255, 1, 1.5);
+    let mapTreble = map(treble, 0, 255, -radius / 2, radius * 2);
+    let scaleTreble = map(treble, 0, 255, 1, 1.5);
 
-    var mapmid = map(mid, 0, 255, -radius * 2, radius * 2);
-    var scalemid = map(mid, 60, 255, 1, 1.5);
+    let mapmid = map(mid, 0, 255, -radius * 2, radius * 2);
+    let scalemid = map(mid, 60, 255, 1, 1.5);
 
     mapMouseX = map(mouseX, 0, width, 2, 0.1);
     mapMouseY = map(mouseY, 0, height, windowHeight / 4, windowHeight / 6);

@@ -1,8 +1,8 @@
-var song;
-var amp;
-var button;
+let song;
+let amp;
+let button;
 
-var volhistory = [];
+let volhistory = [];
 
 function toggleSong() {
   if (song.isPlaying()) {
@@ -28,7 +28,7 @@ function setup() {
 
 function draw() {
   background(0);
-  var vol = amp.getLevel();
+  let vol = amp.getLevel();
   volhistory.push(vol);
   // console.log(volhistory);
   stroke(255);
@@ -36,10 +36,10 @@ function draw() {
 
   translate(width / 2, height / 2);
   beginShape();
-  for (var i = 0; i < 360; i++) {
-    var r = map(volhistory[i],0, 1, 10, 400);
-    var x = r * cos(i);
-    var y = r * sin(i);
+  for (let i = 0; i < 360; i++) {
+    let r = map(volhistory[i],0, 1, 10, 400);
+    let x = r * cos(i);
+    let y = r * sin(i);
     vertex(x, y);
   }
   endShape();

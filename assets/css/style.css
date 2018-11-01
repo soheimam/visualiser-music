@@ -1,0 +1,117 @@
+body {
+  font-family: Oswald;
+  font-size: 24px;
+  line-height: 1.5;
+  background-color: #000000;
+}
+.index{
+  background-color: whitesmoke;
+}
+header {
+  background-color: #000000;
+  color: white;
+}
+h1 img{
+  width: 150px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h1 {
+  font-family: Oswald;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.products .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+.products img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product {
+  width: 30%;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #1cee09;
+}
+.product:hover {
+  cursor: hand;
+  cursor: pointer;
+  opacity: .9;
+}
+a.divLink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  /* Makes sure the link doesn't get underlined */
+  z-index: 10;
+  /* raises anchor tag above everything else in div */
+  background-color: white;
+  /*workaround to make clickable in IE */
+  opacity: 0;
+  /*workaround to make clickable in IE */
+  filter: alpha(opacity=0);
+  /*workaround to make clickable in IE */
+}
+.overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 241, 255, 0.7);
+  left: 0;
+  top: 0;
+  padding: 15px;
+}
+
+.product:hover .overlay {
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.42, 0.24, 0, 1.01);
+}
+/* tablet */
+@media (max-width: 800px) {
+  .product {
+    width: 50%;
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

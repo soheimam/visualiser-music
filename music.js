@@ -4,7 +4,7 @@ function myFunction() {
 let song;
 let button;
 let fft = new p5.FFT();
-let colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
+let colorPalette = ["#0C0A3E", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
 
 
 
@@ -55,7 +55,8 @@ let colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
 
     for (i = 0; i < pieces; i += 0.01) {
 
-        rotate(TWO_PI * pieces);
+        translate( width/2, height/2 );
+        rotate(QUARTER_PI * pieces);
        
 
         push();
@@ -64,7 +65,6 @@ let colorPalette = ["#000", "#72fbfd", "#54B1D9", "#00CC99", "#5dff00"];
         scale(scalebass);
         rotate(frameCount * -0.5);
         line(mapbass, radius / 2, radius, radius);
-  
         line(-mapbass, -radius / 2, radius, radius);
         pop();
 

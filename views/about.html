@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/css/_base.css">
+        <link rel="stylesheet" href="../assets/css/_fonts.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>
+    </head>
+    <body class="index"> <header>
+  
+            <div class="container">
+              <h1>
+                <a href="../index.html">
+                <img src="../assets/images/wavelogo.svg">
+              </h1>
+              <nav>
+                <a href="https://github.com/soheimam">
+              Github
+              </a>
+                <a href="search.html">
+              About
+              </a>
+              </nav>
+            </div>
+          </header>
+ <div class="about-text">
+         
+                <h1>What is waveform?</h1>
+
+                <p>Waveform is a look into various ways to create visulisations based on audio output in the browser.
+                </p>
+                <br>
+                <h1>Fair Use Act Disclaimer</h1>
+                        
+                        
+                        <p>
+                        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
+                        
+                        Fair use is a use permitted by copyright statute that might otherwise be infringing.
+                        </p>
+
+</div>
+        
+        <script>
+        let xPos;
+let yPos;
+
+function setup() { 
+  // p5.js stuff can happen here!
+  createCanvas(windowWidth, windowHeight);
+  xPos = random(width);
+  yPos = random(height);
+} 
+
+function draw() { 
+  // p5.js stuff can happen here!
+  ellipse(random(width), random(height), 50, 50);
+  ellipse(xPos, xPos, mouseX, mouseY);
+}
+        
+        </script>
+
+
+    </body>
+</html>

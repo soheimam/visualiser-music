@@ -3,6 +3,7 @@ body {
   font-size: 24px;
   line-height: 1.5;
   background-color: #000000;
+  overflow:hidden;
 }
 .index{
   background-color: whitesmoke;
@@ -12,7 +13,7 @@ header {
   color: white;
 }
 h1 img{
-  width: 150px;
+  width: 80px;
 }
 
 header a {
@@ -20,6 +21,18 @@ header a {
   text-decoration: none;
 }
 
+.about-text{
+    position: fixed;
+    z-index: 4;
+    font-size: 40px;
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
+    text-align: left;
+    background-color: rgb(226, 226, 226, 0.5);
+}
 header .container {
   display: flex;
   justify-content: space-between;
@@ -38,6 +51,10 @@ h1 {
   font-family: Oswald;
   font-size: 44px;
   font-weight: 700;
+}
+
+.m-top{
+  margin-top:100px;
 }
 
 .products .container {

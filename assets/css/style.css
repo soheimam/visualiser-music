@@ -24,6 +24,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
 .container {
   max-width: 960px;

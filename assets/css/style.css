@@ -31,7 +31,7 @@ header a {
     width: 800px;
     height: 100%;
     text-align: left;
-    color:#16D905;
+    color:black;
     background-color: rgb(226, 226, 226, 0.5);
 }
 header .container {
@@ -56,6 +56,10 @@ h1 {
 
 .m-top{
   margin-top:100px;
+}
+.button{
+  border: solid 5px black;
+  padding:10px 30px;
 }
 
 .products .container {

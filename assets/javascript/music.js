@@ -1,6 +1,4 @@
-function myFunction() {
-  alert("This page contains flashing colours and movement.");
-}
+
 let song;
 let button;
 let fft = new p5.FFT();
@@ -9,7 +7,7 @@ let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
 
 
   function preload() {
-    song = loadSound('../assets/music/song.mp3');
+    song = loadSound('../assets/music/song2.mp3');
   }
 
   function setup() {
@@ -79,7 +77,7 @@ let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
         stroke(colorPalette[4]);
         scale(scalemid);
         rotate(frameCount * 0.8);
-        line(mapmid, -radius * 2, radius, radius);
+        line(mapmid, -radius * 2, radius,-mapmid);
         pop();
 
     }

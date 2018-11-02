@@ -43,7 +43,7 @@ scene.add( hemiLight );
 
 //THREE.sphere(radius, [detailX], [detailY]) 
 var geometry = new THREE.SphereGeometry(10, 250, 250);
-var material = new THREE.MeshLambertMaterial( { color: 0xCCB4E0, opacity:0.3, transparent:true, wireframe:true, emissive: 0xFFB4E0,emissiveIntensity:0.6} );
+var material = new THREE.MeshLambertMaterial( { color: 0xCCB4E0, opacity:0.5, transparent:true, wireframe:true, emissive: 0xFFB4E0,emissiveIntensity:0.6} );
 var sphereOne = new THREE.Mesh( geometry, material );
 
 // create a new sphere with geometry radius 10 and 250 faces
@@ -52,6 +52,7 @@ sphereOne.position.x =0;
 sphereOne.position.y =0;
 sphereOne.position.z =0;
 scene.add(sphereOne);
+
 
 // make a THREE.js loader
 const loader = new THREE.TextureLoader()
@@ -91,6 +92,8 @@ const material = new THREE.PointsMaterial({
     }   
     makeStars("../assets/images/particle.png", 1000);
 
+
+
 // adding the musical component to our scene, using THREE.JS audio analyzer
 var prevFog = true;
 var fftSize = 128;
@@ -112,11 +115,12 @@ audio.setMediaElementSource( mediaElement );
                         i.x+=noisy*avg;
                         i.y+=noisy*avg;
                         i.z+=noisy*avg;
+                        
                     });
                     // console.log(avg);
-                    sphereOne.rotation.x += 0.0005*avg;
-                    sphereOne.rotation.y += 0.0005*avg;
-                    sphereOne.rotation.z += 0.0005*avg;
+                    sphereOne.rotation.x += 0.0003*avg;
+                    sphereOne.rotation.y += 0.0003*avg;
+                    sphereOne.rotation.z += 0.0003*avg;
                     analyser.getFrequencyData();
                     // var sum = analyser.data.reduce(function(a,b){return a+b;});
                     // var avg = sum/analyser.data.length;
@@ -131,6 +135,9 @@ audio.setMediaElementSource( mediaElement );
                     
                     renderer.setSize( window.innerWidth, window.innerHeight );
                 }, false );
+
+
+                
                 
                 render();
         }

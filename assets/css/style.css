@@ -31,6 +31,7 @@ header a {
     width: 800px;
     height: 100%;
     text-align: left;
+    color:#16D905;
     background-color: rgb(226, 226, 226, 0.5);
 }
 header .container {

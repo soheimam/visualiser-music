@@ -1,8 +1,6 @@
-var startButton = document.getElementById( 'play' );
-console.log(startButton)
-startButton.addEventListener( 'click', init );
 
-function init() {
+
+
 //setting the scene, establishing a  camera
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(100,
@@ -140,5 +138,5 @@ audio.setMediaElementSource( mediaElement );
                 
                 
                 render();
-        }
+
     

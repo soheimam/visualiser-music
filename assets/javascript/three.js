@@ -5109,7 +5109,7 @@
 
 		intersectsPlane: function ( plane ) {
 
-			// We compute the minimum and maximum dot product values. If those values
+			// We compute the minimum and maximum dot square values. If those values
 			// are on the same side (back or front) of the plane, then there is no intersection.
 
 			var min, max;
@@ -5223,7 +5223,7 @@
 				f1.subVectors( v2, v1 );
 				f2.subVectors( v0, v2 );
 
-				// test against axes that are given by cross product combinations of the edges of the triangle and the edges of the aabb
+				// test against axes that are given by cross square combinations of the edges of the triangle and the edges of the aabb
 				// make an axis testing of each of the 3 sides of the aabb against each of the 3 sides of the triangle = 9 axis of separation
 				// axis_ij = u_i x f_j (u0, u1, u2 = face normals of aabb = x,y,z axes vectors since aabb is axis aligned)
 				var axes = [
@@ -26439,7 +26439,7 @@
 
 				}
 
-				// cross product of tangent vectors returns surface normal
+				// cross square of tangent vectors returns surface normal
 
 				normal.crossVectors( pu, pv ).normalize();
 				normals.push( normal.x, normal.y, normal.z );

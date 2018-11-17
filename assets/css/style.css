@@ -3,7 +3,7 @@ body {
   font-size: 24px;
   line-height: 1.5;
   background-color: #000000;
-  overflow:hidden;
+  
 }
 .index{
   background-color: whitesmoke;
@@ -28,7 +28,7 @@ header a {
     margin: auto;
     right: 0;
     left: 0;
-    width: 800px;
+    width: 900px;
     height: 100%;
     text-align: left;
     color:black;
@@ -62,18 +62,18 @@ h1 {
   padding:10px 30px;
 }
 
-.products .container {
+.squares .container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
   margin-top: 100px;
 }
-.products img {
+.squares img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.product {
+.square {
   width: 30%;
   margin-left: 10px;
   margin-right: 10px;
@@ -82,7 +82,7 @@ h1 {
   padding: 10px;
   box-shadow: 5px 10px #1cee09;
 }
-.product:hover {
+.square:hover {
   cursor: hand;
   cursor: pointer;
   opacity: .9;
@@ -115,13 +115,13 @@ a.divLink {
   padding: 15px;
 }
 
-.product:hover .overlay {
+.square:hover .overlay {
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.42, 0.24, 0, 1.01);
 }
 /* tablet */
 @media (max-width: 800px) {
-  .product {
+  .square {
     width: 50%;
   }
 }
@@ -133,7 +133,7 @@ a.divLink {
     margin-bottom: 10px;
   }
 
-  .product {
+  .square {
     width: 100%;
     margin-bottom: 20px;
   }

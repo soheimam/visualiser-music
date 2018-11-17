@@ -2,12 +2,12 @@
 let song;
 let button;
 let fft = new p5.FFT();
-let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
+let colorPalette = ["#f4f2f2", "#dbdbdb","#b70000", "#000000"]
 
-
+// ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
 
   function preload() {
-    song = loadSound('../assets/music/song4.mp3');
+    song = loadSound('../assets/music/song5.mp3');
   }
 
   function setup() {
@@ -36,7 +36,7 @@ let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
     var mapTreble = map( treble, 0, 255, -200, 200 );
     var scaleTreble = map(treble, 0, 255, 1, 1.5);
 
-    var mapmid = map( mid, 100, 200, 355, 455 );
+    var mapmid = map( mid, 100, 200, 255, 80 );
     var scalemid = map(mid, 60, 255, 1, 1.5);
 
     mapMouseX = map(mouseX, 0, width, 2, 0.1);
@@ -53,15 +53,15 @@ let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
         push();
         strokeWeight(1);
         noFill();
-        stroke(colorPalette[2]);
-        scale(scalebass *2);
+        stroke(colorPalette[1]);
+        scale(scalebass );
         rotate(frameCount * 0.5);
         ellipse(0, mapbass, 20, mapbass);
         pop();
 
         push();
-        strokeWeight(1);
-        stroke(colorPalette[4]);
+        strokeWeight(2);
+        stroke(colorPalette[2]);
         scale(scaleTreble * 0.5);
         line(mapTreble, radius / 2, radius, mapMouseX);
         line(radius, mapTreble * 2, mapTreble,  mapMouseY);
@@ -70,9 +70,9 @@ let colorPalette = ["#0C0A3E", "#e500ff", "#54B1D9", "#00CC99", "#5dff00"];
 
         push();
         noFill();
-        strokeWeight(1);
-        stroke(colorPalette[1]);
-        scale(scalemid);
+        strokeWeight(4);
+        stroke(colorPalette[3]);
+        scale(scalemid/2) ;
         rotate(frameCount * 0.8);
         ellipse(0, mapmid, 20, mapmid);
         ellipse(0, mapmid * 2, 20, mapmid *2);

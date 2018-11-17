@@ -1,0 +1,19 @@
+{
+  "name": "pmusic",
+  "version": "1.0.0",
+  "description": "Live https://waveform.live/ ---- ## what was my goal with the project? To combine the web audio api data with visualisation libraries.",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "aws s3 sync . s3://waveform.live --exclude *git/* --acl public-read"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soheimam/visualiser-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soheimam/visualiser-music/issues"
+  },
+  "homepage": "https://github.com/soheimam/visualiser-music#readme"
+}
